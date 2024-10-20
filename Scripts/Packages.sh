@@ -40,6 +40,9 @@ if [[ $WRT_REPO != *"immortalwrt"* ]]; then
 	UPDATE_PACKAGE "qmi-wwan" "immortalwrt/wwan-packages" "master" "pkg"
 fi
 
+# Clone luci-app-lucky
+git clone https://github.com/gdy666/luci-app-lucky.git package/luci-app-lucky
+
 #更新软件包版本
 UPDATE_VERSION() {
 	local PKG_NAME=$1
